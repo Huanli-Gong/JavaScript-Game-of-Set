@@ -1,0 +1,290 @@
+/*play.html*/
+body {
+  background-color: rgb(206, 215, 223);
+  min-height: 0px;
+}
+
+section {
+  display: grid;
+  grid-template-rows: repeat(4, 9.5rem);
+  grid-template-columns: repeat(3, 13rem);
+  grid-gap: 2rem;
+  margin-top: 60px;
+  width: 705px;
+}
+
+#buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#sectionContainer, #scoreTimeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sectionContainer {
+  flex-direction: column;
+}
+
+#scoreTimeContainer{
+  flex-direction: row;
+  width: 705px;
+}
+
+#scoreDiv {
+	position: relative;
+	right: 0px;
+}
+
+#timerDiv {
+	position: relative;
+	left: 0px;
+}
+
+#resultDiv {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	width: 500px;
+}
+
+.cardFace {
+	width: 225px;
+	cursor: pointer;
+}
+
+.cardImage {
+  width: 225px;
+  height: 150px;
+  box-shadow: 10px 10px 5px rgb(107, 104, 104); 
+  border-radius: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#timerDiv, #scoreDiv {
+  background-color: white;
+  width: 180px;
+  height: auto;
+  font-size: 36px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 10px 10px 5px rgb(107, 104, 104); 
+}
+
+/* */
+
+#hintBttn {
+  float: left;
+  margin-left:250px;
+}
+
+#homeBttn a {
+     color: #FFFFFF;
+  text-decoration: none;
+}
+
+#addCardsBttn {
+  float: left;
+  margin-left: -80px;
+}
+
+#shuffleBttn {
+  float: right;
+  margin-right: 200px;
+}
+
+.gameBttns {
+  margin-top: 200px;
+}
+
+.gameBttns1 {
+  margin-top: 250px;
+}
+/*instuctions.html*/
+
+ul {
+  text-align: center;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.rule {
+ text-align: center;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.large {
+  text-align: center;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  display: inline-block;
+  font-size: 23px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 2.5px rgb(105,105,105); 
+  margin: 0px 10px 0px 2px;
+}
+
+.popupLandingPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: darkgray;
+  color: white;
+  opacity: 95%;
+  border-radius: 20px;
+}
+
+.positionCenter {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+#popupMsg {
+  background-color: gray;
+  box-shadow: 10px 10px 5px rgb(107, 104, 104); 
+  border-radius: 20px;
+  padding: 20px;
+  width: 700px;
+  text-align: center;	
+}
+
+/*index.html*/
+#homepage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgb(206, 215, 223);
+  resize: none;
+}
+
+.play {
+  width:200px;
+  position: relative;
+}
+
+.btn {
+  background-color:  #66D3FA;
+}
+
+.btn:hover {
+  background-color: #3C99DC
+}
+.btn,.link {
+  padding:  12px;
+  font-size:  1.2em;
+  font-family:  futura Md BT;
+  border:  none;
+  outline:  none;
+  text-decoration: none;
+  width: 200px;
+  color:  white;
+  transition:  0.3s;
+  margin-bottom: 5px;
+  transition:  0.3s; 
+}
+
+.statisticslink {
+  padding:  12px;
+  font-size:  1.2em;
+  font-family:  futura Md BT;
+  border:  none;
+  outline:  none;
+  text-decoration: none;
+  width: 200px;
+  color:  white;
+  transition:  0.3s;
+  margin-bottom: 5px;
+  transition:  0.3s; 
+}
+
+.btn,.links{
+  border-radius: 2px;
+}
+
+.btn a, .link a, .statisticslink a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.links {
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin:  top;
+  transition:  0.3s;
+}
+
+.open {
+  transform: scaleY(1);
+}
+
+.link, .statisticslink{
+  background-color:  #3C99DC;
+}
+
+.link:hover,.statisticslink:hover {
+  background-color:  #2565AE;
+  transform: scale(1.1);
+}
+
+.seq {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.seqTitle {
+  font-family:  futura Md BT;
+  font-size: 4.5em;
+  font-weight: bold;
+  color: white;
+  padding-right: 5px;
+}
+
+.sequence {
+  padding-left: 10px;
+}
+
+.tbl {
+  margin-top:  300px;
+  border-collapse:separate; 
+  border-spacing: 5em;
+  position:  relative;
+}
+
+/*statistics.html*/
+
+#level, #times, #number{
+    height: 30px;
+    border-radius: 8px;
+    margin-top:  5px;
+    margin-bottom:  5px;
+    font-size: 1em;
+    width: 100px;
+}
+

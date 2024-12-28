@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Game of Set - statistics</title>
+  <script src="Card.js" async></script>
+  <script src="Deck.js" async></script>
+  <script src="Table.js" async></script>
+  <script src="Computer.js" async></script>
+  <script src="main.js" async></script>
+  <link rel="stylesheet" href="index.css">
+  <script>  
+    function print(){  
+     var times=document.getElementById("times").value;
+     var number=document.getElementById("number").value;
+     var level=document.getElementById("level").value;
+     if((parseInt(times)+""===times) && (parseInt(number)+""===number) && (parseInt(level)+""===level)){
+      if(parseInt(level)>0 && parseInt(level)<5){
+        if(parseInt(times)>0){
+          if(parseInt(number)>0 && parseInt(number)<82){
+            alert(statistics(parseInt(level),parseInt(times),parseInt(number)));
+          }else{
+            alert("Invalid input. Please make sure number of card is between 1 and 81.");
+          }
+        }else{
+          alert("Invalid input. Please make sure times is positive.");  
+        }
+      }else{
+        alert("Invalid input. Please make sure level is between 1 and 4.");  
+      }
+    }else{
+      alert("Invalid input. Please enter integers."); 
+    }
+  }  
+</script>  
+</head>  
+<body class = "rules">
+ <div class="popupLandingPage positionCenter" id="popup">
+
+  <div id = "popupMsg">
+
+    <h1 id="popupTitle">The Game of Set - statistics</h1>
+
+    <form>  
+      <ul>
+        <li class = "rule"><a>At what level do you want to do statistics? </a><input type="text" name="name"  value="4" id="level" /> 
+        </li> 
+        <li class = "rule"><a>How many times do you want computer to play? </a><input type="text" name="name" value="1000" id="times" /> </li>
+        <li class = "rule"><a>What number of cards do you want on the table? </a><input type="text" name="name" value="12" id="number" /> </li> 
+      </ul>
+    </form> 
+    <ul>    
+      <li class = "large" style = "margin-top: 20px"><button onclick="print()">Submit</button>
+        <button onclick="location.href='index.html'">Home</button></li>
+      </ul>
+    </div>
+  </div>
+  </html>

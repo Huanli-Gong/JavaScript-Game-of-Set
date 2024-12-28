@@ -1,0 +1,61 @@
+<!-- This page functions as the homepage -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="level.js"></script>
+    <meta charset="utf-8">
+    <!-- link the css stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    <title>Set Game</title>
+</head>
+
+<!-- The body is made up of 2 buttons and a title -->
+<body id ="homepage">
+
+    <div class = "seq">
+        <h1 class = "seqTitle">Game Of </h1>
+        <br>
+        <img src="images/setTitle.png" alt="Game of Set" style="max-width: 100%; height: auto;" class ="sequence">
+    </div>
+
+    <table class = "tbl">
+        <tr>
+            <td class = "row">
+             <div class = "play">
+
+                <button class = "btn">Play</button>
+                <div class = "links">
+                    <button class ="link">Level 1</button>
+                    <button class ="link">Level 2</button>
+                    <button class ="link">Level 3</button>
+                    <button class ="link">Level 4</button>
+                    <button class = "statisticslink" onclick="location.href='statistics.html'">Statistics</button>
+                </div>
+            </div>
+        </td>
+
+        <td class = "row">
+            <div class = instructions>
+                <button class = "btn" onclick="location.href='instructions.html'">
+                    Instructions
+                </button>
+            </div>
+        </td>
+    </tr>
+</table>
+<!-- this script creates the cascading button on the homepage
+   and calls the levels based on which button the user clicks on 
+-->
+<script>
+   let btn = document.querySelector('.btn');
+   let links = document.querySelector('.links');
+   btn.addEventListener("click",()=>{
+    links.classList.toggle('open');
+});
+   let link = document.querySelectorAll('.link');
+   for (let i=0; i<link.length; i++) {
+      link[i].addEventListener("click", handleGmode);
+  } 
+</script>
+</body>
+</html> 

@@ -1,0 +1,58 @@
+<!-- this page is the main game page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Set</title>
+    <!-- calls all the .js files and the stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    <script src="Card.js" defer></script>
+    <script src="Deck.js" defer></script>
+    <script src="Table.js" defer></script>
+    <script src="Computer.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<!-- The body consists of the card deck, timer, score counter, 
+        and navigation buttons cards in the 
+ -->
+<body>
+    <h1 id = "setImage"><img src="images/setTitle.png" alt="Game of Set" style="max-width: 100%; height: auto;">
+    </h1>
+    <div id="sectionContainer">
+        <div id="scoreTimeContainer">
+            <div id="scoreDiv">
+                <div id="scoreText">
+                    Score
+                </div>
+                <div id="scoreVal">
+                    0
+                </div>
+            </div>
+            <div id="resultDiv"></div>
+            <div id="timerDiv">
+                <div id="timerText">
+                    Time
+                </div>
+                <div id="timerVal">
+                    00:00
+                </div>
+            </div>
+        </div>
+        <section></section>
+    </div>
+<!-- this div is a pre-game page that preps the user to play -->
+    <div class="popupLandingPage positionCenter" id = "popup">
+       <div id = "popupMsg">
+           <h1>Are you ready?</h1>
+           <p class = "large"><button onclick="disablePopup()">GO!</button></p>
+       </div>
+   </div>
+
+   <div id="buttons">
+    <button id = "homeBttn" onclick="window.location='index.html'">Home</button>
+    <button onclick="getHint()">Hint</button>
+    <button onclick="addCards()">Add Cards</button>
+    <button onclick="shuffle()">Shuffle Board</button>
+</div>
+</body>
+</html>
